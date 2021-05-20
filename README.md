@@ -1,5 +1,5 @@
-# Kafka-Streaming
-# Below 2 commands is to set up zookeeper and kafka server
+ Kafka-Streaming
+ Below 2 commands is to set up zookeeper and kafka server
 /usr/bin/zookeeper-server-start zookeeper.properties
 /usr/bin/kafka-server-start producer.properties
 
@@ -13,3 +13,14 @@ python kafka_server.py
 spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.3.4 --master local[*] data_stream.py
 
 #To get the UI press the PreView Option
+
+
+ Answers to the Given Question
+Latency plays an important role. it effects the performance.
+and also, th processedRowsPerSecond.
+
+
+ideally, we need to increase the parallel processing of the data chinks in spark so that the more data chunks(Partitions)  gets processed at a given time.
+to increase parallelism:
+1. increase the number of Cores of the  each Node in the cluster
+2. changing the number of partitions will also effect the performance
