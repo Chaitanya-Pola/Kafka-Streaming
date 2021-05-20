@@ -15,12 +15,10 @@ spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.3.4 --maste
 #To get the UI press the PreView Option
 
 
- Answers to the Given Question
-Latency plays an important role. it effects the performance.
-and also, th processedRowsPerSecond.
+ Answers:
+ 
+ 1. Latency plays an important role. it effects the performance. and also, th processedRowsPerSecond.
 
-
-ideally, we need to increase the parallel processing of the data chinks in spark so that the more data chunks(Partitions)  gets processed at a given time.
-to increase parallelism:
-1. increase the number of Cores of the  each Node in the cluster
-2. changing the number of partitions will also effect the performance
+2. ideally, we need to increase the parallel processing of the data chinks in spark so that the more data chunks(Partitions)  gets processed at a given time.to increase parallelism:
+ a. increase the number of Cores of the  each Node in the cluster
+ b. changing the number of partitions will also effect the performance
